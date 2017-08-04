@@ -1,5 +1,3 @@
-ini udin belajar git kedua
-
 <?php
 
 /**
