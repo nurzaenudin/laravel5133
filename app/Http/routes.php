@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/udin', function () {
+    return ('udin percobaan kelima');
+});
