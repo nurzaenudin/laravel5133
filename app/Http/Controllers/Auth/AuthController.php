@@ -46,6 +46,7 @@ class AuthController extends Controller
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
 			'username' => 'required|max:255|unique:users',
+			'role' => 'in:organizer,participant',
         ]);
     }
 
@@ -62,6 +63,9 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
 			'username' => $data['username'],
+			'role' => isset($data['role']) ? $data['role'] : 'participant',
         ]);
     }
+	
+	protected $username = 'username';
 }
