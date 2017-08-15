@@ -45,5 +45,3 @@ return "Berhasil mengakses halaman event";
 Route::get('event-history', ['middleware' => ['auth', 'role:participant'], function() {
 return "Berhasil mengakses history event.";
 }]);
-
-tes ini udin ya
